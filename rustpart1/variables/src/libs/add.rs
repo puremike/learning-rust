@@ -25,7 +25,7 @@ where
 }
 
 pub fn calculate() {
-    let x: Vec<i32> = vec![1, 2, 3, 4, 5];
+    let x: [i32; 5] = [1, 2, 3, 4, 5]; // statically defined array
     let m: Vec<f64> = vec![1.3, 2.0, 3.7, 14.0, 5.8];
     let y: Vec<i32> = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 

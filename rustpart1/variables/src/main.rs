@@ -1,9 +1,8 @@
-mod add;
-mod var;
+mod libs;
 
 fn main() {
     println!("Hello, world!");
 
-    add::calculate();
-    var::use_vars();
+    libs::add::calculate();
+    libs::var::use_vars();
 }

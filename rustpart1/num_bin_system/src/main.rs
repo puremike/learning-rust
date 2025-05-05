@@ -1,3 +1,6 @@
+mod numbertypes;
 fn main() {
-    println!("Hello, world!");
+    println!("Number Types Examples");
+
+    numbertypes::usenumbertypes();
 }

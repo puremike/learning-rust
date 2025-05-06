@@ -6,5 +6,4 @@ fn main() {
     number_types::usenumbertypes();
 
     guess_game::guess_number();
-    guess_game::guess_number_random();
 }

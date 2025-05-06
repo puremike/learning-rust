@@ -1,4 +1,4 @@
 [workspace]
-members = [
-    "num_bin_system", "variables",
+members = [ "char_bool_unit_types",
+    "num_bin_system", "variables", "char_bool_unit_types",
 ]

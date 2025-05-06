@@ -1,8 +1,15 @@
 use rand::Rng;
-use std::io;
+use std::{cmp::Ordering, io};
 
 pub fn guess_number() {
     println!("Guessing Game");
+
+    // loop {} everything below can be wrapped under the loop block to make the guessing game continuous
+    // Ordering::Equal => {
+    //     println!("You win!");
+    // break;
+    // }
+
     println!("Enter a number between 1 to 100: ");
 
     let mut number: String = String::new();
@@ -23,11 +30,14 @@ pub fn guess_number() {
 
     assert!(number >= 1 && number <= 100, "Number out of range");
     println!("You guessed: {}", number);
-}
 
-pub fn guess_number_random() {
-    println!("Guessing Game from Random Number");
+    let random_number: i32 = rand::rng().random_range(1..=100);
+    println!("Random number: {}\n", random_number);
 
-    let number: i32 = rand::rng().random_range(1..=100);
-    println!("You guessed: {}", number);
+    // Compare the user input to the random_number
+    match number.cmp(&random_number) {
+        Ordering::Less => print!("Too small!"),
+        Ordering::Greater => print!("Too big!"),
+        Ordering::Equal => print!("You win!"),
+    }
 }

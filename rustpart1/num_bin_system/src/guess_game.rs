@@ -1,7 +1,7 @@
 use rand::Rng;
 use std::io;
 
-pub fn guessnumber() {
+pub fn guess_number() {
     println!("Guessing Game");
     println!("Enter a number between 1 to 100: ");
 
@@ -25,9 +25,9 @@ pub fn guessnumber() {
     println!("You guessed: {}", number);
 }
 
-pub fn guessnumberrandom() {
+pub fn guess_number_random() {
     println!("Guessing Game from Random Number");
 
-    let number: i32 = rand::thread_rng().gen_range(1..=100);
+    let number: i32 = rand::rng().random_range(1..=100);
     println!("You guessed: {}", number);
 }

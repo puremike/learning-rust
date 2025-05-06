@@ -1,10 +1,10 @@
-mod guessnumber;
-mod numbertypes;
+mod guess_game;
+mod number_types;
 fn main() {
     println!("Number Types Examples");
 
-    numbertypes::usenumbertypes();
+    number_types::usenumbertypes();
 
-    guessnumber::guessnumber();
-    guessnumber::guessnumberrandom();
+    guess_game::guess_number();
+    guess_game::guess_number_random();
 }

@@ -21,14 +21,17 @@ pub fn guess_number() {
     // let numner: i32 = number.trim().parse().unwrap();
 
     let number: i32 = match number.trim().parse() {
-        Ok(num) => num,
+        Ok(num) if num > 0 && num <= 100 => num,
+        Ok(_) => {
+            println!("number not in range");
+            return;
+        }
         Err(_) => {
-            println!("Please enter a number in range");
+            println!("Invalid input. Please enter a number.");
             return;
         }
     };
 
-    assert!(number >= 1 && number <= 100, "Number out of range");
     println!("You guessed: {}", number);
 
     let random_number: i32 = rand::rng().random_range(1..=100);

@@ -1,3 +1,7 @@
+// Char has a size of 4 bytes
+// Bool has a sixe of 1 byte
+// Unit has a size of 0
+
 // // Make it work
 // use std::mem::size_of_val;
 // fn main() {

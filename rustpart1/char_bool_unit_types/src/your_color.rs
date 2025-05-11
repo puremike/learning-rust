@@ -2,7 +2,7 @@ use std::io;
 
 pub fn get_color(colors: &[&str]) -> String {
     println!("Enter a number between 1 to {}", colors.len());
-    let mut input = String::new();
+    let mut input: String = String::new();
 
     io::stdin()
         .read_line(&mut input)
